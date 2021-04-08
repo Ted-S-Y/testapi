@@ -20,7 +20,7 @@ const sendRequest = async (name, method, url, query, params, token) => {
         url,
       };
   
-      console.log(options);
+      // console.log(options);
       response = await instance(options);
       clearTimeout(timeoutId);
     } catch (e) {
@@ -47,7 +47,6 @@ const loadData = async () => {
 
     if (data) {
         // console.log(data);
-        data.Data.Data.map(d=>console.log(d));
         return data;
     }
     return [];
