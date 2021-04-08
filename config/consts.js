@@ -3,7 +3,7 @@ module.exports = (function () {
         DBHost: 'localhost',
         DBUser: 'root',
         DBPort: '3306',
-        DBPass: 'dkdlqkspwm1',
+        DBPass: '',
         DBName: 'nodejs_test'
     }
 })();
