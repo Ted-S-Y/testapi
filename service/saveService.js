@@ -20,7 +20,6 @@ const sendRequest = async (name, method, url, query, params, token) => {
         url,
       };
   
-      // console.log(options);
       response = await instance(options);
       clearTimeout(timeoutId);
     } catch (e) {
@@ -51,5 +50,29 @@ const loadData = async () => {
     }
     return [];
   };
+
+
   
-  module.exports = { loadData };
+const loadListData = async () => {
+
+  const { upbitListApi } = CONFIG.apis;
+  const {name, host} = upbitListApi;
+
+  const response = await sendRequest(name, METHOD.GET, `${host}`, null, null, null);
+  console.log("response : " + response.data);
+  console.log("response : " + response.item);
+  console.log("response : " + response.statusCode);
+  console.log("response : " + response.body);
+  console.log("response : " + response);
+
+
+  const { status, data } = response;
+
+  if (data) {
+      console.log("data : " + data);
+      return data;
+  }
+  return [];
+};
+  
+  module.exports = { loadData, loadListData };

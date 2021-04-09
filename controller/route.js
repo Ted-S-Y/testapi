@@ -11,6 +11,7 @@ function wrapAsync(fn) {
 }
 
 router.get("/loadData", SAVE_CTRL.loadData);
+router.get("/loadUpbitListData", SAVE_CTRL.loadUpbitListData);
 
 // router.get("/test", async (req, res, next) => {
 //   axios({
