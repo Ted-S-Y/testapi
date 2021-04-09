@@ -50,6 +50,7 @@ const CryptoDB = DB.MariaDBClient.define(Tables.Cryptoapi, {
   // Other model options go here
   freezeTableName: true,
   tableName: Tables.Cryptoapi,
+  timestamps: false,
 });
 
 module.exports = { CryptoDB };
