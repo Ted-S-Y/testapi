@@ -2,7 +2,7 @@ const config = {
     host: 'localhost',
     user: 'root',
     port: '3306',
-    password: 'dkdlqkspwm1',
+    password: '',
     database: 'nodejs_test',
     logging: false,
     pool: {
